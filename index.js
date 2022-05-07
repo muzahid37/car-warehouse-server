@@ -34,8 +34,8 @@ async function run() {
       const id = req.params.id;
       console.log(id);
       const query = { _id: ObjectId(id) };
-      const service = await serviceCollection.findOne(query);
-      res.send(service);    
+      const carDetail = await serviceCollection.findOne(query);
+      res.send(carDetail);    
   });
   app.post("/inventory", async (req, res) => {
     const newService = req.body;  
